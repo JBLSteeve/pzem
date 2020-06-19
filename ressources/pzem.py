@@ -189,6 +189,8 @@ parser.add_argument("--cycle", help="Cycle to send event", type=str)
 parser.add_argument("--pid", help="Pid file", type=str)
 args = parser.parse_args()
 
+if args.port:
+	_port = args.port
 if args.vitesse:
 	_vitesse = args.vitesse
 if args.socketport:
@@ -234,7 +236,7 @@ try:
     jeedom_serial = serial.Serial(port=_port,baudrate=_vitesse,bytesize=8,parity='N',stopbits=1,xonxoff=0)
     # Start Modbus
     Modbus = modbus_rtu.RtuMaster(jeedom_serial)
-    Modbus.set_timeout(0.1)
+    Modbus.set_timeout(0.3)
     Modbus.set_verbose(False)
     listen()
 except Exception as e:

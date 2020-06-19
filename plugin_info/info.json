@@ -11,5 +11,5 @@
 	"maxDependancyInstallTime" : 45,
     "changelog": "Première version",
     "documentation": "Plugin pour récuperer les informations des Multimètre pzem. A partir de la liaison série (avec le module USB fourni",
-	"pluginVersion" : "0.0.2"
+	"pluginVersion" : "0.0.5"
 }
