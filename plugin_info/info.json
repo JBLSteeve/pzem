@@ -1,0 +1,15 @@
+{
+    "id": "pzem",
+    "name": "Multimètre",
+    "description": "Plugin pour récuperer les informations des Multimètre pzem",
+    "licence": "AGPL",
+    "author": "Steeve",
+    "require": "3.0",
+    "category": "energy",
+    "hasDependency": true,
+	"hasOwnDeamon" : true,
+	"maxDependancyInstallTime" : 45,
+    "changelog": "Première version",
+    "documentation": "Plugin pour récuperer les informations des Multimètre pzem. A partir de la liaison série (avec le module USB fourni",
+	"pluginVersion" : "0.0.2"
+}
