@@ -42,7 +42,7 @@ echo 20 > ${PROGRESS_FILE}
 #sudo apt-get -y install python-ftdi1
 echo 40 > ${PROGRESS_FILE}
 echo "->Installation de la librairie serial"
-#sudo pip uninstall -y serial
+sudo pip3 uninstall -y serial
 #apt_install python-serial
 pip3_install pyserial
 pip3_install setuptools
