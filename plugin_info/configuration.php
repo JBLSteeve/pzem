@@ -42,7 +42,7 @@ try {
     <fieldset>
         <legend><i class="icon fas fa-bolt"></i> {{Multimètre}}</legend>
         <div class="form-group div_local">
-            <label class="col-lg-4 control-label">{{Port du multimètre PSEM}}</label>
+            <label class="col-lg-4 control-label">{{Port du multimètre PZEM}}</label>
             <div class="col-lg-4">
                 <select id="select_port" class="configKey form-control" data-l1key="port">
                     <option value="">Aucun</option>
@@ -74,7 +74,7 @@ try {
         <legend><i class="icon fas fa-cog"></i> {{Configuration avancée}} <i class="fas fa-plus-circle" data-toggle="collapse" href="#OptionsCollapse" role="button" aria-expanded="false" aria-controls="OptionsCollapse"></i></legend>
         <div class="collapse" id="OptionsCollapse">
             <div class="form-group div_local">
-                <label class="col-lg-4 control-label">{{Vitesse du multimètre PSEM}}</label>
+                <label class="col-lg-4 control-label">{{Vitesse du multimètre PZEM}}</label>
                 <div class="col-lg-4">
                     <select class="configKey form-control" id="modem_vitesse" data-l1key="modem_vitesse">
                         <option value="">{{Par défaut}}</option>
@@ -113,7 +113,7 @@ try {
     <fieldset>
     <legend><i class="icon loisir-pacman1"></i> {{Version}}</legend>
         <div class="form-group">
-            <label class="col-lg-4 control-label">Core pzem <sup><i class="fas fa-question-circle tooltips" title="{{C'est la version du programme de connexion au PZEM}}" style="font-size : 1em;color:grey;"></i></sup></label>
+            <label class="col-lg-4 control-label">Core PZEM <sup><i class="fas fa-question-circle tooltips" title="{{C'est la version du programme de connexion au PZEM}}" style="font-size : 1em;color:grey;"></i></sup></label>
             <span style="top:6px;" class="col-lg-4"><?php echo $core_version; ?></span>
         </div>
     </fieldset>

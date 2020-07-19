@@ -32,17 +32,6 @@ if (init('test') != '') {
 	die();
 }
 
-$args = array(
-	'device' => FILTER_SANITIZE_STRING,
-    'adresse'   => FILTER_SANITIZE_STRING,
-    'voltage'   => FILTER_SANITIZE_STRING,
-    'current'   => FILTER_SANITIZE_STRING,
-    'power'   => FILTER_SANITIZE_STRING,
-    'energy'   => FILTER_SANITIZE_STRING,
-    'frequency'   => FILTER_SANITIZE_STRING,
-    'powerfactor'   => FILTER_SANITIZE_STRING,
-);
-
 $result = json_decode(file_get_contents("php://input"), true);
 
 if (!is_array($result)) {
@@ -72,7 +61,7 @@ if (isset($result['device'])) {
 									$unit = "Wh";
 									break;
 								case "frequency":
-									$key = "Frequence";
+									$key = "Fréquence";
 									$unit = "Hz";
 									break;
 								case "power":
