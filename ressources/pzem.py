@@ -58,6 +58,7 @@ def read_modbus():
 			action['power'] = str((data[3] + (data[4] << 16)) / 10.0)
 			action['energy'] = str(data[5] + (data[6] << 16))
 			action['frequency'] = str(data[7] / 10.0)
+			action['powerfactor'] = str(data[8] / 100.0)
 			
 			try:
 				globals.JEEDOM_COM.add_changes('device::'+action['adresse'],action)
