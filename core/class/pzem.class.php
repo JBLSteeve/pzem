@@ -254,30 +254,6 @@ class pzem extends eqLogic
             $cmd->remove();
         }
 
-        $array = array("STAT_JAN_HP", "STAT_JAN_HC", "STAT_FEV_HP", "STAT_FEV_HC", "STAT_MAR_HP", "STAT_MAR_HC", "STAT_AVR_HP", "STAT_AVR_HC", "STAT_MAI_HP", "STAT_MAI_HC", "STAT_JUIN_HP", "STAT_JUIN_HC", "STAT_JUI_HP", "STAT_JUI_HC", "STAT_AOU_HP", "STAT_AOU_HC", "STAT_SEP_HP", "STAT_SEP_HC");
-        foreach ($array as $value){
-            log::add('pzem', 'debug', 'Recherche de => ' . $value);
-            $cmd = $this->getCmd('info', $value);
-            if (is_object($cmd)) {
-                log::add('pzem', 'debug', 'Suppression de => ' . $value);
-                //cache::set('pzem::needRegenerateMonthlyStat', '1');
-                $cmd->remove();
-                //$cmd->save();
-            }
-        }
-
-        $array = array("STAT_OCT_HP", "STAT_OCT_HC", "STAT_NOV_HP", "STAT_NOV_HC", "STAT_DEC_HP", "STAT_DEC_HC", "STAT_MONTH_LAST_YEAR", "STAT_YEAR_LAST_YEAR","STAT_MONTH","STAT_MONTH_PROD", "STAT_YEAR", "STAT_YEAR_PROD", "STAT_LASTMONTH");
-        foreach ($array as $value){
-            log::add('pzem', 'debug', 'Recherche de => ' . $value);
-            $cmd = $this->getCmd('info', $value);
-            if (is_object($cmd)) {
-                log::add('pzem', 'debug', 'Suppression de => ' . $value);
-                //cache::set('pzem::needRegenerateMonthlyStat', '1');
-                $cmd->remove();
-                //$cmd->save();
-            }
-        }
-
     }
 
     public function postSave(){
