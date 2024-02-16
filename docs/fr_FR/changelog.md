@@ -7,3 +7,4 @@
 - V0.0.0 : Création
 - V0.0.1 : Mise à jour de l'installation des dépendances
 - V0.0.2 : Mise à jour de forme et de la documentation (pour commencer les testes)
+- V0.1.0 : Version stable
