@@ -70,8 +70,8 @@ def read_modbus():
 			logging.debug("read error on modbus") 
 			pass
 
-		time.sleep(0.5)
-
+		#time.sleep(0.5)
+		time.sleep(1)
 
 def read_socket():
 	try:
