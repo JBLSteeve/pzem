@@ -70,8 +70,7 @@ def read_modbus():
 			logging.debug("read error on modbus") 
 			pass
 
-		#time.sleep(0.5)
-		time.sleep(5)
+		time.sleep(0.5)
 
 def read_socket():
 	try:
@@ -126,8 +125,7 @@ def listen():
     jeedom_serial = serial.Serial(port=_port,baudrate=_vitesse,bytesize=8,parity='N',stopbits=1,xonxoff=0)
     # Start Modbus
     Modbus = modbus_rtu.RtuMaster(jeedom_serial)
-    #Modbus.set_timeout(2.0)
-    Modbus.set_timeout(5.0)
+    Modbus.set_timeout(2.0)
     Modbus.set_verbose(False)
     # Start Socket
     jeedom_socket.open()
