@@ -71,7 +71,7 @@ def read_modbus():
 			pass
 
 		#time.sleep(0.5)
-		time.sleep(1)
+		time.sleep(5)
 
 def read_socket():
 	try:
