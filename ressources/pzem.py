@@ -133,7 +133,7 @@ def listen():
     logging.debug("Start deamon")
     try:
         while 1:
-            time.sleep(0.1)
+            time.sleep(_cycle)
             read_modbus()
             read_socket()
     except KeyboardInterrupt:
