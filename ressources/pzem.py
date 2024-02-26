@@ -70,7 +70,7 @@ def read_modbus():
 			logging.debug("read error on modbus") 
 			pass
 
-		time.sleep(0.5)
+		time.sleep(_cycle)
 
 def read_socket():
 	try:
@@ -155,9 +155,9 @@ def shutdown():
 	except:
 		pass
 	try:
-		master.close()
-		if slave.is_open:
-			slave.close()
+		Modbus.close()
+		if jeedom_serial.is_open:
+			jeedom_serial.close()
 	except:
 		pass
 	try:
@@ -233,11 +233,11 @@ try:
         shutdown()
     jeedom_socket = jeedom_socket(port=_socket_port,address=_socket_host)
     # Start Serial
-    jeedom_serial = serial.Serial(port=_port,baudrate=_vitesse,bytesize=8,parity='N',stopbits=1,xonxoff=0)
+    	#jeedom_serial = serial.Serial(port=_port,baudrate=_vitesse,bytesize=8,parity='N',stopbits=1,xonxoff=0)
     # Start Modbus
-    Modbus = modbus_rtu.RtuMaster(jeedom_serial)
-    Modbus.set_timeout(0.3)
-    Modbus.set_verbose(False)
+     	#Modbus = modbus_rtu.RtuMaster(jeedom_serial)
+     	#Modbus.set_timeout(0.3)
+     	#Modbus.set_verbose(False)
     listen()
 except Exception as e:
     logging.error('Fatal error : '+str(e))
